@@ -1,0 +1,36 @@
+# Stock Price Forecasting with LSTM
+
+An exploratory forecasting project that compares baseline and tuned LSTM models for daily closing-price sequences from two publicly available stock datasets.
+
+## What it covers
+
+- Date parsing, sorting, missing-value checks, and market-calendar gap analysis
+- Per-series min-max scaling and sliding-window sequence generation
+- Baseline and tuned LSTM regressors with early stopping
+- Time-aware train, validation, and test splits
+- Evaluation with RMSE and MAE, plus prediction-versus-actual visualizations
+
+## Repository layout
+
+```text
+data/
+  AAPL.csv
+  AMD.csv
+notebooks/
+  stock_price_forecasting.ipynb
+```
+
+## Run locally
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install tensorflow pandas numpy matplotlib scikit-learn keras-tuner pandas-market-calendars
+jupyter notebook notebooks/stock_price_forecasting.ipynb
+```
+
+The notebook expects the CSV files in `data/`. The included files are historical market data for experimentation; this project is not financial advice and should not be used for trading decisions.
+
+## Data note
+
+The included CSV files retain their original ticker and date columns. Confirm the dataset license and provenance before redistributing this repository publicly.
