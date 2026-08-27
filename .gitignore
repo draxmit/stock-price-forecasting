@@ -2,6 +2,7 @@
 __pycache__/
 .ipynb_checkpoints/
 model_experiments/
+outputs/model_experiments/
 *.keras
 *.h5
 *.pkl
